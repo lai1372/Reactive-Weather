@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Form({ location, setLocation }) {
+export default function Form({ location, setLocation, setCitySearch }) {
   const [typedLocation, setTypedLocation] = useState("");
 
   function handleChange(e) {
@@ -10,6 +10,7 @@ export default function Form({ location, setLocation }) {
   function handleSubmit(e) {
     e.preventDefault()
     setLocation(typedLocation)
+    setCitySearch(typedLocation)
     setTypedLocation("")
   }
 
